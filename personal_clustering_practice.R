@@ -52,3 +52,4 @@ tibble(Cluster = a3$Group.1, Size = as.vector(table(groups_3))) %>% bind_cols(a3
 a4 <- aggregate(carsb[, -c(1, 2)], list(groups_4), median)
 data.frame(Cluster = a4$Group.1, Size = as.vector(table(groups_4)), a4[, -1])
 
+# Partitioning around medoids ----
