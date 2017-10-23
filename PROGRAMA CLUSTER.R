@@ -80,6 +80,8 @@ clusplot(carrosnum,carroskmcluster$cluster, color=TRUE)  # I think it's better t
 
 #calcula la suma total de cuadrados
 wss <- (nrow(carrosnormal)-1)*sum(apply(carrosnormal,2,var))
+
+medias1 <- apply(carrosnormal, 2, mean)
 sum(apply(carrosnormal, 1, function(obs){sum((obs - medias1)^2)}))  # Should be the same: Total_SS
 
 #la calcula por clusters
